@@ -1,3 +1,6 @@
+#ifndef MEDIAN_FILTER_H
+#define MEDIAN_FILTER_H
+
 #include <queue>
 #include <vector>
 #include <unordered_map>
@@ -9,7 +12,6 @@ class median_filter {
         void add_value(double value);
         void remove_value(double value);
         double find_median();
-        // double find_average();
 
     private:
         int window_size;
@@ -26,3 +28,5 @@ class median_filter {
         template <typename heap_type>
         void prune_heap(heap_type& heap);
 };
+
+#endif
