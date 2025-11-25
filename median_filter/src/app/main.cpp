@@ -87,15 +87,16 @@ int main(){
 
                     // ends timer
                     auto end = chrono::high_resolution_clock::now();
+                    // calculates duration of median filter
+                    chrono::duration<double> duration = end - start;
 
-                    cout << "Using the median filter, your median values are: " << endl;
+                    cout << "Using the two heap median filter, your median values are: " << endl;
                     for (int i = 0; i < results.size(); ++i) {
                         cout << results[i] << endl;
                     }
                     cout << endl;
                     
-                    // calculates duration of median filter
-                    chrono::duration<double> duration = end - start;
+                    // report the duration of the calculation
                     cout << "Two heap median filter time taken: " << duration.count() << " seconds" << endl;
                     
                     cout << endl;
@@ -145,6 +146,8 @@ int main(){
                             auto start2 = chrono::high_resolution_clock::now(); 
 
                             cout << "Your quicksort medians are: " << endl;
+                            vector<double> results2; 
+
                             // iterates through numbers based on window size, pushes numbers to vector, then sorts
                             for (int i = 0; i < numbers.size() - window_option + 1; ++i) {
                                 // initializes vector
@@ -156,25 +159,29 @@ int main(){
 
                                 // sorts vector
                                 quicksort(vec, 0, vec.size()-1);
-
-                                double result;
+           
                                 // finds median on condition that window is even or odd
                                 if (vec.size() % 2 == 0) {
                                     int middle_i_1 = vec.size() / 2 - 1;
                                     int middle_i_2 = vec.size() / 2;
-                                    result = (vec[middle_i_1] + vec[middle_i_2] ) / 2;
+                                    results2.push_back((vec[middle_i_1] + vec[middle_i_2] ) / 2);
                                 } else {
                                     int middle_i = vec.size() / 2;
-                                    result = vec[middle_i];
+                                    results2.push_back(vec[middle_i]);
                                 }
-                                // prints median result
-                                cout << result << endl;
                             }
-                
+
                             // ends timer
                             auto end2 = chrono::high_resolution_clock::now();
                             // calculates duration of median filter
                             chrono::duration<double> duration2 = end2 - start2;
+
+                            cout << "Using the quick sort median filter, your median values are: " << endl;
+                            for (int i = 0; i < results2.size(); ++i) {
+                                cout << results2[i] << endl;
+                            }
+    
+                            cout << endl;
                             cout << "Quicksort median filter time taken: " << duration2.count() << " seconds" << endl;
                             cout << endl;
                             cout << "End of quicksort median results read out." << endl;
@@ -186,7 +193,7 @@ int main(){
                     }
                 }
             }
-        } 
+        }
     }
 
     return 0;
