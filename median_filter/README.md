@@ -52,7 +52,7 @@ alternative, inefficient sorting algorithm will also need to be created for prop
 * A working rolling median filter algorithm written in C++ that both inserts and removes sensor data values.
 * The alternative, inefficient sorting algorithm; for comparison.
 * Demonstrated improvements in noise reduction between the two.
-* Data visualizations for the results with statistical analysis; potential hypothesis testing on
+* Data visualizations for the results; potential hypothesis testing on
 repeated trials or similar. Using: Python/Matplotlib.
 * Stretch Goals:
   * Extension to different data input types.
