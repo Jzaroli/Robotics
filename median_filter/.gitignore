@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# VSCode settings
+.vscode/
+
+# Executable Files
+*.exe

@@ -54,27 +54,6 @@ double median_filter::find_median() {
     return return_value;
 }
 
-// double median_filter::find_average() { 
-//     double sum = 0;
-//     int count = 0;
-    
-//     std::priority_queue<double, std::vector<double>, std::greater<double>> min_heap_copy = min_heap;    
-//     for (int i = 0; i < min_heap_copy.size(); i++) {
-//         sum = sum + min_heap_copy.top();
-//         min_heap_copy.pop();
-//         count++;
-//     }
-
-//     std::priority_queue<double, std::vector<double>, std::less<double>> max_heap_copy = max_heap;
-//     for (int i = 0; i < max_heap_copy.size(); i++) {
-//         sum = sum + max_heap_copy.top();
-//         max_heap_copy.pop();
-//         count++;
-//     }
-
-//     return sum / count;
-// }
-
 
 void median_filter::rebalance() {
     // when max_heap has an extra element, move top to min_heap
