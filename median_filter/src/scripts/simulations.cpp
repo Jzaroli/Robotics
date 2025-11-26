@@ -19,7 +19,7 @@ int main() {
     // ***** Two Heap Median Filter Simulation ***** //
 
     // initializes median filter with window size option
-    int window_size = 200; // note: the window size is fixed!
+    int window_size = 500; // note: the window size is fixed!
     int input_size = 500; // start at 500
     vector<One_Sim_Result> sim_readings;
 
@@ -86,7 +86,7 @@ int main() {
     // ***** QuickSort Median Filter Simulation ***** //
 
     // initializes median filter with window size option
-    int window_size2 = 200; // note: the window size is fixed!
+    int window_size2 = 500; // note: the window size is fixed!
     int input_size2 = 500; // start at 500
     vector<One_Sim_Result> sim_readings2;
 
