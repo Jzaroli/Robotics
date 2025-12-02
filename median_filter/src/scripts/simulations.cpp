@@ -19,8 +19,8 @@ int main() {
     // ***** Two Heap Median Filter Simulation ***** //
 
     // initializes median filter with window size option
-    int window_size = 500; // note: the window size is fixed!
-    int input_size = 500; // start at 500
+    int window_size = 50; // edit me
+    int input_size = 50000; // edit me
     vector<One_Sim_Result> sim_readings;
 
     for (int i = 0; i < 9; i++) { 
@@ -67,7 +67,8 @@ int main() {
 
         sim_readings.push_back(One_Sim_Result{window_size, input_size, duration.count()});
 
-        input_size = input_size * 2; // doubles input size each time for a total of 9 times
+        // input_size = input_size * 2; // doubles input size each time for a total of 9 times; edit me
+        window_size = window_size + 50; // adds 50 to window_size each time for a total of 9 times; edit me
     }
 
     // opens csv file and writes column names
@@ -86,8 +87,8 @@ int main() {
     // ***** QuickSort Median Filter Simulation ***** //
 
     // initializes median filter with window size option
-    int window_size2 = 500; // note: the window size is fixed!
-    int input_size2 = 500; // start at 500
+    int window_size2 = 50; // edit me
+    int input_size2 = 50000; // edit me
     vector<One_Sim_Result> sim_readings2;
 
     for (int i = 0; i < 9; i++) { 
@@ -141,7 +142,8 @@ int main() {
 
         sim_readings2.push_back(One_Sim_Result{window_size2, input_size2, duration.count()});
 
-        input_size2 = input_size2 * 2; // doubles input size each time for a total of 9 times
+        // input_size2 = input_size2 * 2; // doubles input size each time for a total of 9 times; edit me
+        window_size2 = window_size2 + 50; // adds 50 to window_size each time for a total of 9 times; edit me
     }
 
     // opens csv file and writes column names
