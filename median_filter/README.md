@@ -55,7 +55,7 @@ Copy the code locally. From the command line and the app folder, run "g++ main.c
 ## Demo and Simulations Results:
 
 * Demo: https://drive.google.com/file/d/1DqrOjUXbJrNybPZCsKVuuWma2KZCpptl/view?usp=sharing
-* Results: 
+* Results: https://github.com/Jzaroli/Robotics/blob/main/median_filter/analysis/analysis.ipynb
 
 ## Conclusions:
 
