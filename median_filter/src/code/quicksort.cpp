@@ -1,7 +1,6 @@
 #include "quicksort.h"
 
 void quicksort(std::vector<double>& data, int low_idx, int high_idx) {
-    // TODO
     // Handles base case
     if (high_idx <= low_idx) {
         return;
@@ -15,7 +14,6 @@ void quicksort(std::vector<double>& data, int low_idx, int high_idx) {
 }
 
 int quicksort_partition(std::vector<double>& data, int low_idx, int high_idx) {
-    // TODO
     // Pick middle element as pivot
     int midpoint = low_idx + (high_idx - low_idx) / 2;
     double pivot = data[midpoint];
